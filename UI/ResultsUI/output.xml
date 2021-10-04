@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.5 on darwin)" generated="20211003 22:38:28.093" rpa="false" schemaversion="2">
+<suite id="s1" name="UITestsWasabi" source="/Users/bularaghavan/sample_workspace/bink-web-robotframework/UI/UITestsWasabi">
+<suite id="s1-s1" name="AddDeletePaymentCards" source="/Users/bularaghavan/sample_workspace/bink-web-robotframework/UI/UITestsWasabi/AddDeletePaymentCards.robot">
+<test id="s1-s1-t1" name="Scenario 1 : As an Existing Bink Web customer with a valid loyalty card I want to login and Add Visa Payment card and Delete Visa Payment card.">
+<kw name="Given Bink Web Page is loaded in Saucelabs" library="LoginKeywords">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>${DESIRED_CAPABILITIES}</arg>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211003 22:38:28.341" endtime="20211003 22:38:28.341"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211003 22:38:28.342" level="INFO">Opening browser 'Chrome' to base url 'https://web.staging.gb.bink.com/staging/wasabi/login?debugLogin=true' through remote server at 'https://bularaghavan:9733a73c-cb14-42df-92f1-176df8de2c54@ondemand.eu-central-1.saucelabs.com:443/wd/hub'.</msg>
+<status status="PASS" starttime="20211003 22:38:28.342" endtime="20211003 22:39:13.182"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login.username}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:39:13.182" endtime="20211003 22:39:14.557"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211003 22:39:14.557" endtime="20211003 22:39:15.186"/>
+</kw>
+<status status="PASS" starttime="20211003 22:38:28.341" endtime="20211003 22:39:15.186"/>
+</kw>
+<kw name="And I enter my email_address and password in the relevant fields" library="LoginKeywords">
+<arg>${email}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login.username}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:15.190" level="INFO">Typing text 'bularaghavan+test98@gmail.com' into text field 'xpath=//*[@id='bink-app-root']/div/div[1]/div[2]/form/label[1]/input'.</msg>
+<status status="PASS" starttime="20211003 22:39:15.189" endtime="20211003 22:39:17.590"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${login.password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:17.592" level="INFO">Typing text 'Password01' into text field 'xpath=//*[@id='bink-app-root']/div/div[1]/div[2]/form/label[2]/input'.</msg>
+<status status="PASS" starttime="20211003 22:39:17.591" endtime="20211003 22:39:19.814"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:15.187" endtime="20211003 22:39:19.814"/>
+</kw>
+<kw name="And I click the Login button" library="LoginKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login.loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:19.816" level="INFO">Clicking element 'xpath=//*[@id='bink-app-root']/div/div[1]/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20211003 22:39:19.815" endtime="20211003 22:39:21.308"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211003 22:39:26.310" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211003 22:39:21.309" endtime="20211003 22:39:26.310"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:19.815" endtime="20211003 22:39:26.311"/>
+</kw>
+<kw name="Then I am logged into my account" library="LoginKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LoyaltyCard.WasabiHeroImg}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:39:26.313" endtime="20211003 22:39:27.614"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:26.312" endtime="20211003 22:39:27.614"/>
+</kw>
+<kw name="And I click the Add Payment Card button on LCD" library="PaymentCardsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardIcon}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:39:27.616" endtime="20211003 22:39:28.938"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:28.939" level="INFO">Clicking element 'xpath=//*[local-name()='svg'][@height='38px']'.</msg>
+<status status="PASS" starttime="20211003 22:39:28.938" endtime="20211003 22:39:30.612"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:27.615" endtime="20211003 22:39:30.612"/>
+</kw>
+<kw name="And I can add Payment card with cardholderName and cardNumber" library="PaymentCardsKeywords">
+<arg>${cardHolderName}</arg>
+<arg>${visaCardNumber}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalExpMonth}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:30.616" level="INFO">Clicking element 'xpath=//option[normalize-space(text())=07]'.</msg>
+<status status="PASS" starttime="20211003 22:39:30.615" endtime="20211003 22:39:32.036"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalExpYear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:32.036" level="INFO">Clicking element 'xpath=//option[normalize-space(text())=32]'.</msg>
+<status status="PASS" starttime="20211003 22:39:32.036" endtime="20211003 22:39:33.432"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalCardholderName}</arg>
+<arg>${cardHolderName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:33.433" level="INFO">Typing text 'Tester' into text field 'xpath=//*[@id='bink-form-field-payment-card-cardholder-name']'.</msg>
+<status status="PASS" starttime="20211003 22:39:33.432" endtime="20211003 22:39:36.723"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>tag:iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20211003 22:39:36.723" level="INFO">Selecting frame 'tag:iframe'.</msg>
+<status status="PASS" starttime="20211003 22:39:36.723" endtime="20211003 22:39:38.033"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalCardNumber}</arg>
+<arg>${cardNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:38.036" level="INFO">Typing text '4539850226497469' into text field 'xpath=//*[@id='card_number']'.</msg>
+<status status="PASS" starttime="20211003 22:39:38.033" endtime="20211003 22:39:40.418"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20211003 22:39:40.418" endtime="20211003 22:39:41.046"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardButton}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:39:41.046" endtime="20211003 22:39:42.336"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:42.340" level="INFO">Clicking element 'xpath=//button[text()='Add credit/debit card']'.</msg>
+<status status="PASS" starttime="20211003 22:39:42.337" endtime="20211003 22:39:43.828"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:30.613" endtime="20211003 22:39:43.828"/>
+</kw>
+<kw name="And I can delete Payment card" library="PaymentCardsKeywords">
+<arg>${visaLastFourDigits}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardButton}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:39:43.830" endtime="20211003 22:39:45.122"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:45.125" level="INFO">Clicking element 'xpath=//*[local-name()='svg'][@class='PaymentCard_root__delete__5UBn-']'.</msg>
+<status status="PASS" starttime="20211003 22:39:45.123" endtime="20211003 22:39:46.589"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardNo}</arg>
+<arg>${lastFourDigits}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:46.591" level="INFO">Typing text '7469' into text field 'xpath=//*[@id='bink-form-field-last-four-digits']'.</msg>
+<status status="PASS" starttime="20211003 22:39:46.589" endtime="20211003 22:39:48.855"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deletePaymentCard.removeCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:48.857" level="INFO">Clicking element 'xpath=//button[text()='Remove card']'.</msg>
+<status status="PASS" starttime="20211003 22:39:48.855" endtime="20211003 22:39:50.350"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:43.829" endtime="20211003 22:39:50.350"/>
+</kw>
+<kw name="Capture Screenshot" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211003 22:39:51.468" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211003 22:39:50.351" endtime="20211003 22:39:51.469"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:50.351" endtime="20211003 22:39:51.469"/>
+</kw>
+<doc>Wasabi Add/Delete Payment Feature
+
+</doc>
+<tag>PaymentCards</tag>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<tag>Visa</tag>
+<status status="PASS" starttime="20211003 22:38:28.340" endtime="20211003 22:39:51.469"/>
+</test>
+<test id="s1-s1-t2" name="Scenario 2 : As an Existing Bink Web customer with a valid loyalty card I want to login and Add Mastercard Payment card and Delete Mastercard Payment card.">
+<kw name="Given I click the Add Payment Card button on LCD" library="PaymentCardsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardIcon}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:39:51.474" endtime="20211003 22:39:52.756"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:52.759" level="INFO">Clicking element 'xpath=//*[local-name()='svg'][@height='38px']'.</msg>
+<status status="PASS" starttime="20211003 22:39:52.756" endtime="20211003 22:39:54.436"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:51.473" endtime="20211003 22:39:54.437"/>
+</kw>
+<kw name="And I can add Payment card with cardholderName and cardNumber" library="PaymentCardsKeywords">
+<arg>${cardHolderName}</arg>
+<arg>${masterCardNumber}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalExpMonth}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:54.440" level="INFO">Clicking element 'xpath=//option[normalize-space(text())=07]'.</msg>
+<status status="PASS" starttime="20211003 22:39:54.439" endtime="20211003 22:39:55.851"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalExpYear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:55.852" level="INFO">Clicking element 'xpath=//option[normalize-space(text())=32]'.</msg>
+<status status="PASS" starttime="20211003 22:39:55.851" endtime="20211003 22:39:57.288"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalCardholderName}</arg>
+<arg>${cardHolderName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:39:57.290" level="INFO">Typing text 'Tester' into text field 'xpath=//*[@id='bink-form-field-payment-card-cardholder-name']'.</msg>
+<status status="PASS" starttime="20211003 22:39:57.288" endtime="20211003 22:39:59.471"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>tag:iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20211003 22:39:59.472" level="INFO">Selecting frame 'tag:iframe'.</msg>
+<status status="PASS" starttime="20211003 22:39:59.472" endtime="20211003 22:40:00.751"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalCardNumber}</arg>
+<arg>${cardNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:00.753" level="INFO">Typing text '5318409723092358' into text field 'xpath=//*[@id='card_number']'.</msg>
+<status status="PASS" starttime="20211003 22:40:00.752" endtime="20211003 22:40:03.257"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20211003 22:40:03.257" endtime="20211003 22:40:03.907"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardButton}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:40:03.907" endtime="20211003 22:40:05.193"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:05.196" level="INFO">Clicking element 'xpath=//button[text()='Add credit/debit card']'.</msg>
+<status status="PASS" starttime="20211003 22:40:05.193" endtime="20211003 22:40:06.628"/>
+</kw>
+<status status="PASS" starttime="20211003 22:39:54.437" endtime="20211003 22:40:06.629"/>
+</kw>
+<kw name="And I can delete Payment card" library="PaymentCardsKeywords">
+<arg>${mastercardLastFourDigits}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardButton}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:40:06.632" endtime="20211003 22:40:07.908"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:07.910" level="INFO">Clicking element 'xpath=//*[local-name()='svg'][@class='PaymentCard_root__delete__5UBn-']'.</msg>
+<status status="PASS" starttime="20211003 22:40:07.909" endtime="20211003 22:40:09.578"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardNo}</arg>
+<arg>${lastFourDigits}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:09.580" level="INFO">Typing text '2358' into text field 'xpath=//*[@id='bink-form-field-last-four-digits']'.</msg>
+<status status="PASS" starttime="20211003 22:40:09.578" endtime="20211003 22:40:11.930"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deletePaymentCard.removeCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:11.933" level="INFO">Clicking element 'xpath=//button[text()='Remove card']'.</msg>
+<status status="PASS" starttime="20211003 22:40:11.931" endtime="20211003 22:40:13.357"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:06.630" endtime="20211003 22:40:13.357"/>
+</kw>
+<kw name="Capture Screenshot" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211003 22:40:14.356" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211003 22:40:13.358" endtime="20211003 22:40:14.356"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:13.358" endtime="20211003 22:40:14.357"/>
+</kw>
+<doc>Wasabi Add/Delete Payment Feature
+
+</doc>
+<tag>Mastercard</tag>
+<tag>PaymentCards</tag>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20211003 22:39:51.472" endtime="20211003 22:40:14.357"/>
+</test>
+<test id="s1-s1-t3" name="Scenario 3 : As an Existing Bink Web customer with a valid loyalty card I want to login and Add Mastercard Payment card and Delete Mastercard Payment card.">
+<kw name="Given I click the Add Payment Card button on LCD" library="PaymentCardsKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardIcon}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:40:14.360" endtime="20211003 22:40:15.629"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:15.631" level="INFO">Clicking element 'xpath=//*[local-name()='svg'][@height='38px']'.</msg>
+<status status="PASS" starttime="20211003 22:40:15.629" endtime="20211003 22:40:17.181"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:14.359" endtime="20211003 22:40:17.181"/>
+</kw>
+<kw name="And I can add Payment card with cardholderName and cardNumber" library="PaymentCardsKeywords">
+<arg>${cardHolderName}</arg>
+<arg>${americanexpCardNumber}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalExpMonth}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:17.185" level="INFO">Clicking element 'xpath=//option[normalize-space(text())=07]'.</msg>
+<status status="PASS" starttime="20211003 22:40:17.183" endtime="20211003 22:40:18.591"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalExpYear}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:18.594" level="INFO">Clicking element 'xpath=//option[normalize-space(text())=32]'.</msg>
+<status status="PASS" starttime="20211003 22:40:18.592" endtime="20211003 22:40:19.988"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalCardholderName}</arg>
+<arg>${cardHolderName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:19.991" level="INFO">Typing text 'Tester' into text field 'xpath=//*[@id='bink-form-field-payment-card-cardholder-name']'.</msg>
+<status status="PASS" starttime="20211003 22:40:19.989" endtime="20211003 22:40:22.245"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>tag:iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20211003 22:40:22.246" level="INFO">Selecting frame 'tag:iframe'.</msg>
+<status status="PASS" starttime="20211003 22:40:22.246" endtime="20211003 22:40:23.546"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayModalCardNumber}</arg>
+<arg>${cardNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:23.549" level="INFO">Typing text '340906421443075' into text field 'xpath=//*[@id='card_number']'.</msg>
+<status status="PASS" starttime="20211003 22:40:23.546" endtime="20211003 22:40:26.034"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20211003 22:40:26.034" endtime="20211003 22:40:26.665"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardButton}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:40:26.665" endtime="20211003 22:40:27.942"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addPaymentCard.addPayCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:27.945" level="INFO">Clicking element 'xpath=//button[text()='Add credit/debit card']'.</msg>
+<status status="PASS" starttime="20211003 22:40:27.943" endtime="20211003 22:40:29.373"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:17.182" endtime="20211003 22:40:29.374"/>
+</kw>
+<kw name="And I can delete Payment card" library="PaymentCardsKeywords">
+<arg>${americanexpLastFourDigits}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardButton}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:40:29.375" endtime="20211003 22:40:30.650"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:30.652" level="INFO">Clicking element 'xpath=//*[local-name()='svg'][@class='PaymentCard_root__delete__5UBn-']'.</msg>
+<status status="PASS" starttime="20211003 22:40:30.650" endtime="20211003 22:40:32.076"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${deletePaymentCard.deletePayCardNo}</arg>
+<arg>${lastFourDigits}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:32.079" level="INFO">Typing text '3075' into text field 'xpath=//*[@id='bink-form-field-last-four-digits']'.</msg>
+<status status="PASS" starttime="20211003 22:40:32.076" endtime="20211003 22:40:34.292"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deletePaymentCard.removeCardButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:34.294" level="INFO">Clicking element 'xpath=//button[text()='Remove card']'.</msg>
+<status status="PASS" starttime="20211003 22:40:34.292" endtime="20211003 22:40:35.740"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:29.374" endtime="20211003 22:40:35.740"/>
+</kw>
+<kw name="And Logout out of Bink Web" library="WasabiClubSupportKeywords">
+<kw name="I click the Wasabi Club Support Icon" library="WasabiClubSupportKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${wasabiClubSupport.wasabiClubSupportIcon}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:40:35.742" endtime="20211003 22:40:37.038"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${wasabiClubSupport.wasabiClubSupportIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:37.040" level="INFO">Clicking element 'xpath=//*[local-name()='svg'][@class='AccountMenu_root__menu-button-icon__3x80R']'.</msg>
+<status status="PASS" starttime="20211003 22:40:37.038" endtime="20211003 22:40:38.419"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:35.742" endtime="20211003 22:40:38.420"/>
+</kw>
+<kw name="I click the Logout Button" library="WasabiClubSupportKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${wasabiClubSupport.logoutButton}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211003 22:40:38.420" endtime="20211003 22:40:39.753"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${wasabiClubSupport.logoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211003 22:40:39.756" level="INFO">Clicking element 'xpath=//button[text()='Logout']'.</msg>
+<status status="PASS" starttime="20211003 22:40:39.754" endtime="20211003 22:40:41.252"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:38.420" endtime="20211003 22:40:41.253"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:35.741" endtime="20211003 22:40:41.253"/>
+</kw>
+<kw name="Capture Screenshot" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211003 22:40:42.095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211003 22:40:41.255" endtime="20211003 22:40:42.095"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:41.254" endtime="20211003 22:40:42.095"/>
+</kw>
+<doc>Wasabi Add/Delete Payment Feature
+
+</doc>
+<tag>AmericanExpress</tag>
+<tag>PaymentCards</tag>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20211003 22:40:14.358" endtime="20211003 22:40:42.095"/>
+</test>
+<kw name="Close the Browser Window" type="TEARDOWN">
+<kw name="Close Browser Window" library="WasabiClubSupportKeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211003 22:40:42.098" endtime="20211003 22:40:42.786"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:42.098" endtime="20211003 22:40:42.787"/>
+</kw>
+<status status="PASS" starttime="20211003 22:40:42.097" endtime="20211003 22:40:42.787"/>
+</kw>
+<doc>To run: robot -d UI/ResultsUI -i PaymentCards UI/UITestsWasabi</doc>
+<status status="PASS" starttime="20211003 22:38:28.123" endtime="20211003 22:40:42.787"/>
+</suite>
+<status status="PASS" starttime="20211003 22:38:28.096" endtime="20211003 22:40:42.791"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">AmericanExpress</stat>
+<stat pass="1" fail="0" skip="0">Mastercard</stat>
+<stat pass="3" fail="0" skip="0">PaymentCards</stat>
+<stat pass="3" fail="0" skip="0">Regression</stat>
+<stat pass="3" fail="0" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">Visa</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="UITestsWasabi">UITestsWasabi</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="AddDeletePaymentCards">UITestsWasabi.AddDeletePaymentCards</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

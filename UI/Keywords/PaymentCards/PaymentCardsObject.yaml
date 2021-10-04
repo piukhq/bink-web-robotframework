@@ -1,0 +1,17 @@
+---
+addPaymentCard:
+  addPayCardIcon:                          xpath=//*[local-name()='svg'][@height='38px']
+  frame_id:                                xpath=spreedly-number-frame-1935
+  addPayModalExpMonth:                     xpath=//option[normalize-space(text())=07]
+  addPayModalExpYear:                      xpath=//option[normalize-space(text())=32]
+  addPayModalCardNumber:                   xpath=//*[@id='card_number']
+  addPayModalCardholderName:               xpath=//*[@id='bink-form-field-payment-card-cardholder-name']
+  addPayCardButton:                        xpath=//button[text()='Add credit/debit card']
+  addPayModalprivacyLink:                  xpath=//a[text()="Bink Privacy and Security"]
+  addAPaymentCardButton:                   xpath=//*[local-name()='svg'][@height='44px']
+
+deletePaymentCard:
+  deletePayCardButton:                     xpath=//*[local-name()='svg'][@class='PaymentCard_root__delete__5UBn-']
+  deletePayCardNo:                         xpath=//*[@id='bink-form-field-last-four-digits']
+  removeCardButton:                        xpath=//button[text()='Remove card']
+  last_four_digits:                        xpath=//*[@id='bink-form-field-last-four-digits']
