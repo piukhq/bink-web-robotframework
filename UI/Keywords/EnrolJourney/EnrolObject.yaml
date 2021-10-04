@@ -1,0 +1,29 @@
+---
+mailtrap:
+   mailtrapEmail:                        xpath=//input[@type='email']
+   mailtrapPassword:                     xpath=//input[@type='password']
+   mailtrapLogin:                        xpath=//input[@type='submit']
+   mailtrapInboxes:                      xpath=//span[text()='Inboxes']
+   mailyrapInboxes:                      css=.iwx0a8f:nth-child(2) .inbox_name
+   mailtrapAutoInbox:                    xpath=//a[@title ='Bink Web Automation Inbox']
+   mailtrapreload:                       xpath=//*[local-name()='svg'][@class='i4w4pc3 i4w4pc3--reload]
+   mailtrapFirstEmail:                   xpath=//span[text()='Access your Wasabi Club account']
+   mailtrapClearInbox:                   xpath=//*[local-name()='svg'][@class='i4w4pc3 i4w4pc3--clear-inbox']
+   mailtrapLogoutButton:                 xpath=//span[text()='Logout']
+
+magicLink:
+   email:                                xpath=//*[@id="bink-form-field-undefined"]
+   continueButton:                       xpath=//button[text()='Continue']
+
+
+joinWasabi:
+  firstName:                             xpath=//*[@id="bink-form-field-first_name"]
+  lastName:                              xpath=//*[@id="bink-form-field-last_name"]
+  dobDD:                                 xpath=//*[@id='bink-form-field-date_of_birth-DD']
+  dobMM:                                 xpath=//*[@id='bink-form-field-date_of_birth-MM']
+  dobYY:                                 xpath=//*[@id='bink-form-field-date_of_birth-YYYY']
+  checkboxBinkTC:                        xpath=//*[@id='bink-form-field-retailer-terms-and-conditions']
+  checkboxRetTC:                         xpath=//*[@id='bink-form-field-undefined']
+  registerButton:                        xpath=//button[text()='Register']
+
+

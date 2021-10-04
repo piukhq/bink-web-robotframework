@@ -1,0 +1,6 @@
+---
+url:                          https://web.staging.gb.bink.com/staging/wasabi/login?debugLogin=true
+browser:                      Chrome
+DESIRED_CAPABILITIES:         name:Windows + C,platform:Windows 10,browserName:Chrome,version:latest,tunnelIdentifier:bularaghavan_tunnel_id
+
+

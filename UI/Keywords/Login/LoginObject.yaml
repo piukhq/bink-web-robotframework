@@ -1,0 +1,13 @@
+---
+login:
+   username:                  xpath=//*[@id='bink-app-root']/div/div[1]/div[2]/form/label[1]/input
+   password:                  xpath=//*[@id='bink-app-root']/div/div[1]/div[2]/form/label[2]/input
+   loginButton:               xpath=//*[@id='bink-app-root']/div/div[1]/div[2]/form/button
+   email_magiclink:           xpath=//*[@id="bink-form-field-undefined"]
+   continueButton:            xpath=//button[text()='Continue']
+
+LoyaltyCard:
+   WasabiHeroImg:               xpath=//div[contains(@class,'MembershipCardHeroImage_root__card-number__1k2bJ') and contains(., 'Card number')]
+   WasabiHeroImg1:              xpath=//*[@id='bink-app-root']/../../..//*[contains(@class,'MembershipCardHeroImage_root__card-number__1k2bJ')
+   WasabiAltHeroImg:            xpath=//img[@class='MembershipCardModal_root__image__1f19T']
+   AltHeroCloseButton:          xpath=//*[local-name()='svg'][@class='Modal_root__close-button-svg__2N998']

@@ -1,0 +1,4 @@
+---
+wasabiClubSupport:
+   wasabiClubSupportIcon:         xpath=//*[local-name()='svg'][@class='AccountMenu_root__menu-button-icon__3x80R']
+   logoutButton:                   xpath=//button[text()='Logout']
